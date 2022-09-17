@@ -1,0 +1,58 @@
+title-text: ""
+desktop-image: "background.png"
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+
++ boot_menu {
+  left = 15%
+  width = 70%
+  top = 30%
+  height = 50%+8
+
+  item_color = "#cccccc"
+  item_height = 30
+
+  item_spacing = 0
+  item_padding = 1
+  item_icon_space = 0
+
+  selected_item_color= "#eeeeee"
+  selected_item_pixmap_style = "highlight_*.png"
+
+  scrollbar = true
+  scrollbar_width = 5
+  scrollbar_slice = center
+  scrollbar_thumb = "highlight_*.png"
+}
+
+
++ label {
+  id = "__timeout__"
+  text = "@TIMEOUT_NOTIFICATION_SHORT@"
+
+  top = 100%-1
+  width = 100%
+  height = 1
+}
+
+
++ label {
+  text = "@VTOY_HOTKEY_TIP@"
+  color = "#eeeef8"
+
+  left = 30%
+  top = 95%
+}
+
+
++ vbox {
+    left = 100%-175
+    top = 50
+    + label {text = "@VTOY_MEM_DISK@" color = "#ffff00" align = "right" height = 25 width = 150}
+    + label {text = "@VTOY_GRUB2_MODE@" color = "#ffff00" align = "right" height = 25 width = 150}
+    + label {text = "@VTOY_WIMBOOT_MODE@" color = "#ffff00" align = "right" height = 25 width = 150}
+    + label {text = "@VTOY_ISO_RAW@" color = "#ffff00" align = "right" height = 25 width = 150}
+    + label {text = "@VTOY_ISO_UEFI_DRV@" color = "#ffff00" align = "right" height = 25 width = 150}
+}
